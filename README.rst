@@ -17,7 +17,7 @@ Prerequisites
 Quickstart
 ----------
 
-1. Create docker-compose.yml and add:
+1. Create docker-compose.yml and add::
 
     cassandra:
       image: mashape/cassandra
