@@ -1,8 +1,1 @@
-ca-certificates
-locales
-openssl
-libpcre3-dev
-lua5.1=5.1.5-7.1
-dnsmasq=2.72-3+deb8u1
-netcat
-nano
+netcat lua5.1 openssl libpcre3 dnsmasq sudo

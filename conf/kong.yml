@@ -13,8 +13,8 @@ plugins_available:
   - request_transformer
   - response_transformer
   - requestsizelimiting
-  - analytics
-  - ip-restriction
+##  - analytics
+##  - ip-restriction
 
 ## The Kong working directory
 ## (Make sure you have read and write permissions)
@@ -58,7 +58,7 @@ memory_cache_size: 128
 ## Nginx configuration
 nginx: |
   worker_processes auto;
-  error_log logs/error.log error;
+  error_log logs/error.log info;
   daemon on;
 
   worker_rlimit_nofile {{auto_worker_rlimit_nofile}};
