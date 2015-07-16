@@ -35,7 +35,7 @@ Quickstart
 Rebuild
 -------
 
-1. $ git clone git@github.com:dirkmoors/docker-kong.git
+1. $ git clone git@github.com:vikingco/docker-kong.git
 2. $ cd docker-kong
 3. $ docker-compose up
 
