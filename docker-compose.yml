@@ -1,7 +1,5 @@
 cassandra:
   image: mashape/cassandra
-  ports:
-    - "9042:9042"
 
 kong:
   build: .

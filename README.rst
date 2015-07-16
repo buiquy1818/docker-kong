@@ -17,7 +17,25 @@ Prerequisites
 Quickstart
 ----------
 
-1. git clone git@github.com:dirkmoors/docker-kong.git
-2. cd docker-kong
-3. docker-compose up
+1. Create docker-compose.yml and add:
+
+    cassandra:
+      image: mashape/cassandra
+
+    kong:
+      image: dirkmoors/kong
+      links:
+        - cassandra
+      ports:
+        - "8001:8001"
+        - "8000:8000"
+
+2. $ docker-compose up
+
+Rebuild
+-------
+
+1. $ git clone git@github.com:dirkmoors/docker-kong.git
+2. $ cd docker-kong
+3. $ docker-compose up
 
