@@ -1,0 +1,11 @@
+build-essential
+libreadline-dev
+libncurses5-dev
+libssl-dev
+liblua5.1-0-dev=5.1.5-7.1
+perl
+make
+openssh-client
+git-core
+wget
+unzip
