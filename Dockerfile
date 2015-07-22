@@ -7,7 +7,7 @@ MAINTAINER Dirk Moors
 ENV KONG_GIT_URL https://github.com/Mashape/kong.git
 ENV KONG_GIT_BRANCH master
 
-ENV KONG_BASE_PKG_VERSION 0.3.2
+ENV KONG_BASE_PKG_VERSION 0.4.0
 ENV KONG_BASE_PKG https://github.com/Mashape/kong/releases/download/${KONG_BASE_PKG_VERSION}/kong-${KONG_BASE_PKG_VERSION}.jessie_all.deb
 
 ENV DEPENDENCYDIR /tmp/deps
