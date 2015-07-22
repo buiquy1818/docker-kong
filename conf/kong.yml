@@ -13,8 +13,8 @@ plugins_available:
   - request_transformer
   - response_transformer
   - requestsizelimiting
-##  - analytics
-##  - ip-restriction
+  - ip_restriction
+  - mashape-analytics
 
 ## The Kong working directory
 ## (Make sure you have read and write permissions)
@@ -58,8 +58,8 @@ memory_cache_size: 128
 ## Nginx configuration
 nginx: |
   worker_processes auto;
-  error_log logs/error.log info;
-  daemon on;
+  error_log logs/error.log error;
+  daemon off;
 
   worker_rlimit_nofile {{auto_worker_rlimit_nofile}};
 
@@ -189,6 +189,11 @@ nginx: |
           local lapis = require "lapis"
           lapis.serve("kong.api.app")
         ';
+      }
+
+      location /nginx_status {
+        internal;
+        stub_status;
       }
 
       location /robots.txt {
