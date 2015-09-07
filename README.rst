@@ -11,8 +11,8 @@ docker-kong
 Prerequisites
 -------------
 
-1. docker (I'm running v1.7.0)
-2. docker-compose (I'm running v1.3.1)
+1. docker (I'm running v1.8.1)
+2. docker-compose (I'm running v1.3.3)
 
 Quickstart
 ----------
