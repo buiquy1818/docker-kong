@@ -43,7 +43,7 @@ RUN cd /etc/kong/ \
    && ln -s ${CONFIGURATIONDIR}/kong.yml
 
 # expose ports
-EXPOSE 8000 8001
+EXPOSE 8000 8443 8001 8053
 
 # expose run command
 CMD echo "Waiting 5 seconds..." \
