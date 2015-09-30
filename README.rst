@@ -4,14 +4,14 @@ docker-kong
 
 | |dockerhub|
 
-.. |dockerhub| image:: http://dockeri.co/image/dirkmoors/kong
+.. |dockerhub| image:: http://dockeri.co/image/vikingco/kong
     :alt: Docker Hub
-    :target: https://registry.hub.docker.com/u/dirkmoors/kong/
+    :target: https://registry.hub.docker.com/u/vikingco/kong/
 
 Prerequisites
 -------------
 
-1. docker (I'm running v1.8.1)
+1. docker (I'm running v1.8.2)
 2. docker-compose (I'm running v1.3.3)
 
 Quickstart
@@ -23,7 +23,7 @@ Quickstart
       image: mashape/cassandra
 
     kong:
-      image: dirkmoors/kong
+      image: vikingco/kong
       links:
         - cassandra
       ports:
