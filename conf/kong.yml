@@ -1,21 +1,24 @@
 ## Available plugins on this server
 plugins_available:
   - ssl
+  - jwt
+  - acl
   - cors
+  - oauth2
   - tcp-log
   - udp-log
   - file-log
   - http-log
-  - mashape-analytics
-  - oauth2
   - key-auth
+  - hmac-auth
   - basic-auth
   - ip-restriction
-  - rate-limiting
-  - response-ratelimiting
+  - mashape-analytics
   - request-transformer
   - response-transformer
   - request-size-limiting
+  - rate-limiting
+  - response-ratelimiting
 
 ## The Kong working directory
 ## (Make sure you have read and write permissions)
@@ -65,7 +68,7 @@ memory_cache_size: 128
 nginx: |
   worker_processes auto;
   error_log logs/error.log error;
-  daemon on;
+  daemon off;
 
   worker_rlimit_nofile {{auto_worker_rlimit_nofile}};
 
@@ -141,6 +144,7 @@ nginx: |
 
       ssl_certificate {{ssl_cert}};
       ssl_certificate_key {{ssl_key}};
+      ssl_protocols TLSv1 TLSv1.1 TLSv1.2;# omit SSLv3 because of POODLE (CVE-2014-3566)
 
       location / {
         default_type 'text/plain';

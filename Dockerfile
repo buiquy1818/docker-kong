@@ -48,5 +48,4 @@ EXPOSE 8000 8443 8001 8053
 # expose run command
 CMD echo "Waiting 5 seconds..." \
     && sleep 5 \
-    && kong start \
-    && tail -f /usr/local/kong/logs/error.log
+    && kong start
