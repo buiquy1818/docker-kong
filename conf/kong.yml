@@ -10,7 +10,7 @@ plugins_available:
   - file-log
   - http-log
   - key-auth
-  - hmac-auth
+#  - hmac-auth
   - basic-auth
   - ip-restriction
   - mashape-analytics
@@ -68,7 +68,7 @@ memory_cache_size: 128
 nginx: |
   worker_processes auto;
   error_log logs/error.log error;
-  daemon off;
+  daemon on;
 
   worker_rlimit_nofile {{auto_worker_rlimit_nofile}};
 
