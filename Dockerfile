@@ -46,7 +46,8 @@ RUN cd /etc/kong/ \
 EXPOSE 8000 8443 8001 8053
 
 # expose run command
-CMD echo "Waiting 5 seconds..." \
-    && sleep 5 \
+CMD echo "Waiting for cassandra..." \
+    && while ! nc -z cassandra 9042; do sleep 0.1; done \
+    && echo "Cassandra is ready! Launching Kong..." \
     && kong start \
     && tail -f /usr/local/kong/logs/error.log
