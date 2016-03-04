@@ -29,6 +29,13 @@ Quickstart
       ports:
         - "8001:8001"
         - "8000:8000"
+    
+    kong-dashboard:
+      image: pgbi/kong-dashboard
+      links:
+        - kong
+      ports:
+        - "80:8080"
 
 2. $ docker-compose up
 
